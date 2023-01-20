@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Concrete
+namespace Entities.DTOs
 {
-    public class Report
+    public class ReportDto
     {
         public string Location { get; set; }
         public int NumberOfPeople { get; set; }

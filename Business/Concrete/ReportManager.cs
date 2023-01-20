@@ -3,6 +3,7 @@ using Core.Utilities.Results;
 using Core.Utilities.Results.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,9 @@ namespace Business.Concrete
             _reportDal = reportDal;
         }
 
-        public IDataResult<List<Report>> GetByLocations()
+        public IDataResult<List<ReportDto>> GetByLocations()
         {
-            return new SuccesDataResult<List<Report>>(_reportDal.GetByLocations());
+            return new SuccesDataResult<List<ReportDto>>(_reportDal.GetByLocations());
         }
     }
 }

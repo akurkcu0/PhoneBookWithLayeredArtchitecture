@@ -2,6 +2,7 @@
 using DataAccess.Abstract;
 using DataAccess.Concrete.Context;
 using Entities.Concrete;
+using Entities.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,13 +14,13 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfReportsDal : EfEntityRepositoryBase<ContactInformation, PhoneBookDbContext>, IReportsDal
     {
-        public List<Report> GetByLocations()
+        public List<ReportDto> GetByLocations()
         {
             using (PhoneBookDbContext context = new PhoneBookDbContext())
             {
                 var locations = context.contactInformations.GroupBy(p => p.Location).Select(s => s.Key).ToList();
                 var result = from location in locations
-                             select new Report()
+                             select new ReportDto()
                              {
                                  Location = location,
                                  NumberOfPeople = context.contactInformations.Where(p => p.Location == location).Count(),
