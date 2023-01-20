@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\PhoneBookWenApi\PhoneBookWebApi.csproj" />
   </ItemGroup>
 
 </Project>

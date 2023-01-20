@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core2\Core.csproj",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookWebApi", "PhoneBookWenApi\PhoneBookWebApi.csproj", "{B7DDF9B2-C64B-411B-B8A8-62F2C7A94371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookWithLayeredArtchitectureTest", "PhoneBookWithLayeredArtchitectureTest\PhoneBookWithLayeredArtchitectureTest.csproj", "{5B19CDC7-9C1D-4ECD-9CB3-E823696407B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookTest", "PhoneBookWithLayeredArtchitectureTest\PhoneBookTest.csproj", "{5B19CDC7-9C1D-4ECD-9CB3-E823696407B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

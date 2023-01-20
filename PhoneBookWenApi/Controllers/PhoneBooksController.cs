@@ -52,6 +52,7 @@ namespace PhoneBookWebAPI.Controllers
         [HttpPost("update")]
         public IActionResult Put(PhoneBook phoneBook)
         {
+            if (id <= 0) return BadRequest();
             var result = _phoneBookService.Update(phoneBook);
             if (result.IsSuccess)
             {
