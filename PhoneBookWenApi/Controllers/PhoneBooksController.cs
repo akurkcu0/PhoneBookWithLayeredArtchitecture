@@ -52,7 +52,7 @@ namespace PhoneBookWebAPI.Controllers
         [HttpPost("update")]
         public IActionResult Put(PhoneBook phoneBook)
         {
-            if (id <= 0) return BadRequest();
+            if (phoneBook == null) return BadRequest();
             var result = _phoneBookService.Update(phoneBook);
             if (result.IsSuccess)
             {
@@ -65,6 +65,7 @@ namespace PhoneBookWebAPI.Controllers
         [HttpDelete("delete")]
         public IActionResult Delete(PhoneBook phoneBook)
         {
+            if (phoneBook == null) return BadRequest();
             var result = _phoneBookService.Delete(phoneBook);
             if (result.IsSuccess)
             {
