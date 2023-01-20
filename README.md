@@ -10,4 +10,6 @@
   * Entity Framework Core 6
   * MsSQL Server
   * Redis
-  * Automapper
+  * Automapper  
+  * XUnit
+  * Fake it easy(could be used in Moq instead in this project)
