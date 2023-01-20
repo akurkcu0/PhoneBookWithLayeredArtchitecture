@@ -12,12 +12,10 @@ namespace PhoneBookWebAPI.Controllers
     public class PhoneBooksController : ControllerBase
     {
         private readonly IPhoneBookService _phoneBookService;
-        private readonly IMapper _mapper;
 
-        public PhoneBooksController(IPhoneBookService phoneBookService, IMapper mapper)
+        public PhoneBooksController(IPhoneBookService phoneBookService)
         {
             _phoneBookService = phoneBookService;
-            _mapper = mapper;
         }
 
         [HttpGet("getAll")]
@@ -38,9 +36,8 @@ namespace PhoneBookWebAPI.Controllers
         public IActionResult Add(PhoneBook phoneBook)
         {
             if (phoneBook == null) return BadRequest();
-            PhoneBook phoneBooks = _mapper.Map<PhoneBook>(phoneBook);
 
-            var result = _phoneBookService.Add(phoneBooks);
+            var result = _phoneBookService.Add(phoneBook);
             if (result.IsSuccess)
             {
                 RemoveCache<List<PhoneBook>>("phoneBooks");
